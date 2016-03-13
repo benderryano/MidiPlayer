@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16c1ff0f-5921-405e-bfe1-00d73b868cf9" name="Default" comment="first commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cs3500/music/model/MusicModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/cs3500/music/tests/MusicModelTest.java" afterPath="$PROJECT_DIR$/Test/cs3500/music/tests/MusicModelTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs3500/music/model/Beat.java" afterPath="$PROJECT_DIR$/src/cs3500/music/model/Beat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs3500/music/model/GenericMusicModel.java" afterPath="$PROJECT_DIR$/src/cs3500/music/model/GenericMusicModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs3500/music/model/MusicBeat.java" afterPath="$PROJECT_DIR$/src/cs3500/music/model/MusicBeat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs3500/music/model/MusicModel.java" afterPath="$PROJECT_DIR$/src/cs3500/music/model/MusicModel.java" />
     </list>
     <ignored path="MusicProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,17 +34,17 @@
         <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/MusicBeat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MusicModel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/MusicModel.java">
+      <file leaf-file-name="Beat.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/Beat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02303523">
-              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.25338754">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/GenericMusicModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,15 +106,16 @@
         <option value="$PROJECT_DIR$/src/cs3500/music/model/Range.java" />
         <option value="$PROJECT_DIR$/Test/cs3500/music/model/BeatTest.java" />
         <option value="$PROJECT_DIR$/src/cs3500/music/model/MusicNote.java" />
-        <option value="$PROJECT_DIR$/src/cs3500/music/model/GenericMusicModel.java" />
-        <option value="$PROJECT_DIR$/src/cs3500/music/model/MusicModel.java" />
         <option value="$PROJECT_DIR$/Test/cs3500/music/model/MusicModelTest.java" />
-        <option value="$PROJECT_DIR$/src/cs3500/music/model/Beat.java" />
         <option value="$PROJECT_DIR$/src/cs3500/music/model/MusicConsoleView.java" />
-        <option value="$PROJECT_DIR$/src/cs3500/music/model/MusicBeat.java" />
         <option value="$PROJECT_DIR$/Test/cs3500/music/model/MusicConsoleViewTest.java" />
         <option value="$PROJECT_DIR$/Test/cs3500/music/model/RangeTest.java" />
         <option value="$PROJECT_DIR$/Test/cs3500/music/tests/RangeTest.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/cs3500/music/model/MusicModel.java" />
+        <option value="$PROJECT_DIR$/src/cs3500/music/model/Beat.java" />
+        <option value="$PROJECT_DIR$/src/cs3500/music/model/GenericMusicModel.java" />
+        <option value="$PROJECT_DIR$/src/cs3500/music/model/MusicBeat.java" />
       </list>
     </option>
   </component>
@@ -811,7 +816,7 @@
       <workItem from="1457026430167" duration="3710000" />
       <workItem from="1457132151281" duration="4170000" />
       <workItem from="1457147604538" duration="2301000" />
-      <workItem from="1457878777357" duration="608000" />
+      <workItem from="1457878777357" duration="2421000" />
     </task>
     <servers />
   </component>
@@ -848,7 +853,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42357000" />
+    <option name="totallyTimeSpent" value="44170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1140,24 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/Beat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/GenericMusicModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/MusicConsoleView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1224,18 +1211,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/MusicBeat.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        <state vertical-scroll-proportion="-27.242977">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/MusicModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02303523">
-          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.07859079">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/MusicBeat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/GenericMusicModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3500/music/model/Beat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25338754">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>

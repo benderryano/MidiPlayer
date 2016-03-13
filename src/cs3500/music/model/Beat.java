@@ -1,5 +1,7 @@
 package cs3500.music.model;
 
+import java.util.List;
+
 /**
  * Created by Viviano on 2/29/2016.
  */
@@ -32,6 +34,15 @@ public interface Beat extends Iterable<Note> {
    * @return the note a p or null if there isn't one
    */
    Note getNoteAt(Pitch p);
+
+  /**
+   * Returns a list of all the notes at a given location
+   *
+   * @param pitch pitch of notes
+   * @return a list of notes which could be empty
+   * @throws IllegalArgumentException if beat < 0
+   */
+   List<Note> getNotesAt(Pitch pitch);
 
   /**
    * Adds note to this beat

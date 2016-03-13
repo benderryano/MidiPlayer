@@ -1,5 +1,7 @@
 package cs3500.music.model;
 
+import java.util.List;
+
 /**
  * Created by Viviano on 2/29/2016.
  */
@@ -39,7 +41,7 @@ public interface MusicModel {
   Beat getBeatAt(int i);
 
   /**
-   * Return the note at a given location
+   * Returns the TOP note at a given location
    *
    * @param beat beat of note
    * @param pitch pitch of note
@@ -47,6 +49,16 @@ public interface MusicModel {
    * @throws IllegalArgumentException if beat < 0
    */
   Note getNoteAt(int beat, Pitch pitch);
+
+  /**
+   * Returns a list of all the notes at a given location
+   *
+   * @param beat beat of notes
+   * @param pitch pitch of notes
+   * @return a list of notes which could be empty
+   * @throws IllegalArgumentException if beat < 0
+   */
+  List<Note> getNotesAt(int beat, Pitch pitch);
 
   /**
    * Clears all of the notes in this song

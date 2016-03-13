@@ -59,7 +59,7 @@ public class MusicBeat implements Beat {
    */
   public Note getNoteAt(Pitch p) {
     Map<Integer, Note> cands = new HashMap<>();
-    for (Note n : this.notes) {
+    for (Note n : this) {
       if (n.getPitch() == p)
         cands.put(n.getBeat(), n);
     }
@@ -73,6 +73,35 @@ public class MusicBeat implements Beat {
     if (best == null)
       return null;
     return best.getValue();
+  }
+
+  /**
+   * Returns a list of all the notes at a given location
+   *
+   * @param pitch pitch of notes
+   * @return a list of notes which could be empty
+   * @throws IllegalArgumentException if beat < 0
+   */
+  @Override
+  public List<Note> getNotesAt(Pitch pitch) {
+    List<Note> res = new ArrayList<>();
+    for (Note n : this) {
+      if (n.getPitch() == pitch) {
+        res = insert(n, res);
+      }
+    }
+    return res;
+  }
+
+  private List<Note> insert(Note n, List<Note> notes) {
+    for (int i = 0; i < notes.size(); i++) {
+      if (n.getBeat() >= notes.get(i).getBeat()) {
+        notes.add(i, n);
+        return notes;
+      }
+    }
+    notes.add(notes.size() - 1, n);
+    return notes;
   }
 
   /**

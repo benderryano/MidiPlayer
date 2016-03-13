@@ -1,6 +1,7 @@
 package cs3500.music.model;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -96,7 +97,25 @@ public class GenericMusicModel implements MusicModel {
   @Override
   public Note getNoteAt(int beat, Pitch pitch) {
     Beat b = getBeatAt(beat);
+    if (b == null)
+      return null;
     return b.getNoteAt(pitch);
+  }
+
+  /**
+   * Returns a list of all the notes at a given location
+   *
+   * @param beat  beat of notes
+   * @param pitch pitch of notes
+   * @return a list of notes which could be empty
+   * @throws IllegalArgumentException if beat < 0
+   */
+  @Override
+  public List<Note> getNotesAt(int beat, Pitch pitch) {
+    Beat b = getBeatAt(beat);
+    if (b == null)
+      return null;
+    return b.getNotesAt(pitch);
   }
 
   /**
