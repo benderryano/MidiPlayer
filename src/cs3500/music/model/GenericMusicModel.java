@@ -83,7 +83,7 @@ public class GenericMusicModel implements MusicModel {
   public Beat getBeatAt(int i) {
     if (i < 0 || i >= this.getLength())
       throw new IllegalArgumentException("Invalid beat index");
-    return this.beats.get(i);
+    return new ImmutableBeat(this.beats.get(i));
   }
 
   /**
