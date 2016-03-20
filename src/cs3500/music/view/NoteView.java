@@ -13,7 +13,7 @@ import java.awt.*;
 public class NoteView extends JPanel {
 
   private ModelDisplayAdapter model;
-  private int stepH = 20, stepW = 20;
+  private int stepH = 20, stepW = 20, paddingLeft = 40, paddingTop = 40;
 
   @Override
   public void paintComponent(Graphics g) {
@@ -22,11 +22,14 @@ public class NoteView extends JPanel {
       return;
 
     Graphics2D g2d = (Graphics2D)g;
-
     int startY = getStartY(model);
+
+    drawNoteGrid(paddingLeft, startY + paddingTop, g2d);
+  }
+
+  private void drawNoteGrid(int startX, int startY, Graphics2D g2d) {
     Range range = model.getRange();
     int rangeLen = range.length();
-
 
     for (int x = 0; x < model.getLength(); x++) {
       Beat b = model.getBeatAt(x);
@@ -59,8 +62,11 @@ public class NoteView extends JPanel {
       }
     }
     //draw last line
-    g2d.drawLine(model.getLength() * stepW, startY, model.getLength() * stepW, startY + rangeLen * stepH);
+    g2d.drawLine(
+            model.getLength() * stepW, startY,
+            model.getLength() * stepW, startY + rangeLen * stepH);
   }
+
 
   private int getStartY(ModelDisplayAdapter model) {
     int range = model.getRange().length();
@@ -70,5 +76,25 @@ public class NoteView extends JPanel {
 
   public void setModel(ModelDisplayAdapter model) {
     this.model = model;
+  }
+
+
+  /**
+   * If the <code>preferredSize</code> has been set to a
+   * non-<code>null</code> value just returns it.
+   * If the UI delegate's <code>getPreferredSize</code>
+   * method returns a non <code>null</code> value then return that;
+   * otherwise defer to the component's layout manager.
+   *
+   * @return the value of the <code>preferredSize</code> property
+   * @see #setPreferredSize
+   */
+  @Override
+  public Dimension getPreferredSize() {
+    if (this.model == null)
+      return super.getPreferredSize();
+    else
+      return new Dimension(model.getLength() * stepW + paddingLeft,
+              model.getRange().length() * stepH + paddingTop);
   }
 }

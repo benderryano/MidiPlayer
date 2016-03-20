@@ -14,11 +14,14 @@ public class GuiViewFrame extends JFrame implements MusicView {
    * Creates new GuiView
    */
   public GuiViewFrame() {
-    this.noteView = new NoteView();
     this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+    this.noteView = new NoteView();
     noteView.setLocation(100, 100);
-    //getContentPane().setLayout();
-    this.getContentPane().add(noteView);
+    JScrollPane scrollFrame = new JScrollPane(noteView);
+    this.noteView.setAutoscrolls(true);
+    scrollFrame.setPreferredSize(new Dimension(1500, 500));
+    this.getContentPane().add(scrollFrame);
     this.pack();
   }
 
