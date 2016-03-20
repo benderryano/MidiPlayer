@@ -20,4 +20,13 @@ public interface Note {
    */
   int getDuration();
 
+  /**
+   * @return the instrument of this note
+   */
+  int getInstrument();
+
+  /**
+   * @return the volume of this note
+   */
+  int getVolume();
 }

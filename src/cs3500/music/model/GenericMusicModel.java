@@ -10,7 +10,7 @@ import java.util.Map;
 public class GenericMusicModel implements MusicModel {
 
   private final Map<Integer, Beat> beats;
-  private int length;
+  private int length, tempo;
   
   public GenericMusicModel() {
     this(0);
@@ -20,6 +20,7 @@ public class GenericMusicModel implements MusicModel {
     if (length < 0)
       throw new IllegalArgumentException("Length cannot be equal to zero");
     this.length = length;
+    this.tempo = 1000;
     beats = new HashMap<>();
   }
   
@@ -83,7 +84,10 @@ public class GenericMusicModel implements MusicModel {
   public Beat getBeatAt(int i) {
     if (i < 0 || i >= this.getLength())
       throw new IllegalArgumentException("Invalid beat index");
-    return new ImmutableBeat(this.beats.get(i));
+    Beat b = this.beats.get(i);
+    if (b == null)
+      return null;
+    return new ImmutableBeat(b);
   }
 
   /**
@@ -190,5 +194,15 @@ public class GenericMusicModel implements MusicModel {
   @Override
   public Beat newBeat(int beatValue) {
     return new MusicBeat(beatValue);
+  }
+
+  /**
+   * Sets the tempo of this piece
+   *
+   * @param tempo
+   */
+  @Override
+  public void setTempo(int tempo) {
+    this.tempo = tempo;
   }
 }

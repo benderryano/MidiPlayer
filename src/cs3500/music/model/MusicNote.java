@@ -6,10 +6,10 @@ import java.util.Objects;
  * Created by Viviano on 2/29/2016.
  */
 public class MusicNote implements Note {
-  public final int beat, duration;
+  public final int beat, duration, volume, instrument;
   public final Pitch pitch;
 
-  public MusicNote(int beat, int duration, Pitch pitch) {
+  public MusicNote(int beat, int duration, int instrument, Pitch pitch, int volume) {
     Objects.requireNonNull(pitch);
     if (beat < 0)
       throw new IllegalArgumentException("Beat cannot be negative");
@@ -17,7 +17,13 @@ public class MusicNote implements Note {
       throw new IllegalArgumentException("Length cannot <= 0");
     this.beat = beat;
     this.duration = duration;
+    this.instrument = instrument;
     this.pitch = pitch;
+    this.volume = volume;
+  }
+
+  public MusicNote(int beat, int duration, Pitch pitch) {
+    this(beat, duration, 1, pitch, 72);
   }
 
   /**
@@ -44,12 +50,31 @@ public class MusicNote implements Note {
     return this.duration;
   }
 
+  /**
+   * @return the instrument of this note
+   */
+  @Override
+  public int getInstrument() {
+    return this.instrument;
+  }
+
+  /**
+   * @return the volume of this note
+   */
+  @Override
+  public int getVolume() {
+    return this.volume;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (!(o instanceof Note)) return false;
     Note n = (Note)o;
-    return n.getBeat() == this.getBeat() && n.getPitch() == this.getPitch()
-            && n.getDuration() == this.getDuration();
+    return n.getBeat() == this.getBeat()
+            && n.getPitch() == this.getPitch()
+            && n.getDuration() == this.getDuration()
+            && n.getInstrument() == this.getInstrument()
+            && n.getVolume() == this.getVolume();
   }
 
   @Override

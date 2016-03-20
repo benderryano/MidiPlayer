@@ -96,4 +96,9 @@ public interface MusicModel {
    * @return a new beat at beatValue
    */
   Beat newBeat(int beatValue);
+
+  /**
+   * Sets the tempo of this piece
+   */
+  void setTempo(int tempo);
 }
