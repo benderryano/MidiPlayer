@@ -4,8 +4,7 @@ import cs3500.music.model.MusicModel;
 import cs3500.music.util.GenericMusicModelBuilder;
 import cs3500.music.util.MusicReader;
 import cs3500.music.view.GuiViewFrame;
-import cs3500.music.view.MidiViewImpl;
-import cs3500.music.view.ModelDisplayImpl;
+import cs3500.music.view.ModelDisplayAdapterImpl;
 
 import javax.sound.midi.InvalidMidiDataException;
 import java.io.File;
@@ -22,7 +21,7 @@ public class MusicEditor {
             new FileReader(new File("res/mary-little-lamb.txt")),
             new GenericMusicModelBuilder());
 
-    view.setModel(new ModelDisplayImpl(model));
+    view.setModel(new ModelDisplayAdapterImpl(model));
     view.initialize();
   }
 }

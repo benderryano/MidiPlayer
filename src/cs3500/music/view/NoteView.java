@@ -12,7 +12,7 @@ import java.awt.*;
  */
 public class NoteView extends JPanel {
 
-  private ModelDisplay model;
+  private ModelDisplayAdapter model;
   private int stepH = 20, stepW = 20;
 
   @Override
@@ -32,7 +32,7 @@ public class NoteView extends JPanel {
       Beat b = model.getBeatAt(x);
       for (int y = 0; y < rangeLen; y++) {
         if (b != null) {
-          switch (b.getStatusAt(Pitch.values()[range.min.ordinal() + y])) {
+          switch (b.getStatusAt(Pitch.values()[range.max.ordinal() - y])) {
             default:
             case EMPTY:
               g2d.setColor(Color.BLACK);
@@ -62,13 +62,13 @@ public class NoteView extends JPanel {
     g2d.drawLine(model.getLength() * stepW, startY, model.getLength() * stepW, startY + rangeLen * stepH);
   }
 
-  private int getStartY(ModelDisplay model) {
+  private int getStartY(ModelDisplayAdapter model) {
     int range = model.getRange().length();
     range *= stepH;
     return getHeight() / 2 - range / 2;
   }
 
-  public void setModel(ModelDisplay model) {
+  public void setModel(ModelDisplayAdapter model) {
     this.model = model;
   }
 }

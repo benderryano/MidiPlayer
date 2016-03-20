@@ -7,13 +7,13 @@ import java.util.List;
 /**
  * Created by Viviano on 3/18/2016.
  */
-public interface ModelDisplay {
+public interface ModelDisplayAdapter {
 
   /**
    * Gets the notes at the given beat
    *
    * @param i beat number, must be >= 0
-   * @return beat at i
+   * @return beat an immutable beat
    * @throws IllegalArgumentException if i < 0
    */
   Beat getBeatAt(int i);

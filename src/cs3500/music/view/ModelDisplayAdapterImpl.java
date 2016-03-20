@@ -7,11 +7,11 @@ import java.util.List;
 /**
  * Created by Viviano on 3/18/2016.
  */
-public class ModelDisplayImpl implements ModelDisplay {
+public class ModelDisplayAdapterImpl implements ModelDisplayAdapter {
 
   MusicModel model;
 
-  public ModelDisplayImpl(MusicModel model) {
+  public ModelDisplayAdapterImpl(MusicModel model) {
     this.model = model;
   }
   /**

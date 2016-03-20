@@ -38,7 +38,7 @@ public class GuiViewFrame extends JFrame implements MusicView {
    * @param model new content of this view
    */
   @Override
-  public void setModel(ModelDisplay model) {
+  public void setModel(ModelDisplayAdapter model) {
     this.noteView.setModel(model);
   }
 

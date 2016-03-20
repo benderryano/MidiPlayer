@@ -1,7 +1,5 @@
 package cs3500.music.view;
 
-import cs3500.music.model.MusicModel;
-
 /**
  * Created by Viviano on 3/18/2016.
  */
@@ -19,5 +17,5 @@ public interface MusicView {
    *
    * @param model new content of this view
    */
-  void setModel(ModelDisplay model);
+  void setModel(ModelDisplayAdapter model);
 }

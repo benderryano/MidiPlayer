@@ -1,7 +1,5 @@
 package cs3500.music.view;
 
-import cs3500.music.model.MusicModel;
-
 import javax.sound.midi.*;
 
 /**
@@ -36,7 +34,7 @@ public class MidiViewImpl implements MusicView {
    * @param model new content of this view
    */
   @Override
-  public void setModel(ModelDisplay model) {
+  public void setModel(ModelDisplayAdapter model) {
     //TODO:
   }
 
